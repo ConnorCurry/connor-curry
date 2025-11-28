@@ -1,0 +1,21 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@theme {
+    --color-primary: #715df2;
+    --color-secondary: #0046FF;
+}
+
+@layer components {
+    .fi-body {
+        @apply bg-slate-900;
+    }
+    .fi-topbar {
+        @apply bg-primary;
+    }
+    .fi-topbar-start {
+        @apply w-full justify-between mr-4;
+    }
+}

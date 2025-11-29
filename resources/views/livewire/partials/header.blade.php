@@ -11,5 +11,5 @@
 
         </div>
     </div>
-    <img class="w-full" src={{ asset('images/layered-waves-haikei.svg') }}>
+    <img class="w-full max-h-16 object-fill object-top" src={{ asset('images/layered-waves-haikei.webp') }}>
 </div>

@@ -3,14 +3,19 @@
         <img class="max-h-175 min-h-80 w-full object-cover object-center md:object-[0_60%] -mt-5 md:-mt-20 -z-1 relative"
             src={{ asset('images/splash-img.webp') }}>
         <div class="absolute top-0 z-2 left-0 w-full h-full bg-black/50 flex flex-col justify-center align-center">
-            <div class="mx-auto max-w-7xl w-full p-4">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">
-                    Connor<br>Curry
-                </h1>
-                <h2 class="text-xl md:text-2xl inline-block">
-                    <hr class="mb-4">
-                    Web Developer,<br class=""> Programmer, Musician
-                </h2>
+            <div class="mx-auto max-w-7xl w-full p-4 overflow-hidden">
+                <div x-data="{ show: false }" x-on:load.window="show = true" x-show="show"
+                    x-transition:enter="transition-all ease-in-out duration-1000"
+                    x-transition:enter-start="-translate-x-full opacity-0"
+                    x-transition:enter-end="translate-x-0 opacity-100">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4">
+                        Connor<br>Curry
+                    </h1>
+                    <h2 class="text-xl md:text-2xl inline-block">
+                        <hr class="mb-4">
+                        Web Developer,<br>Programmer, Musician
+                    </h2>
+                </div>
             </div>
         </div>
     </div>
@@ -43,11 +48,16 @@
             </div>
 
             <div class="w-full md:w-1/2 relative aspect-4/3 cursor-pointer" wire:click='shufflePhotos'>
-                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 0 ? "rotate-0 z-5" : "rotate-4 z-0" }}" src={{ asset('images/graduation.webp') }}>
-                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 1 ? "rotate-0 z-5" : "rotate-4 z-4" }}" src={{ asset('images/stewart-pk.webp') }}>
-                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 2 ? "rotate-0 z-5" : "rotate-4 z-3" }}" src={{ asset('images/guitar.webp') }}>
-                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 3 ? "rotate-0 z-5" : "rotate-4 z-2" }}" src={{ asset('images/snowboarding.webp') }}>
-                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 4 ? "rotate-0 z-5" : "rotate-4 z-1" }}" src={{ asset('images/family.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 0 ? 'rotate-0 z-5' : 'rotate-4 z-0' }}"
+                    src={{ asset('images/graduation.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 1 ? 'rotate-0 z-5' : 'rotate-4 z-4' }}"
+                    src={{ asset('images/stewart-pk.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 2 ? 'rotate-0 z-5' : 'rotate-4 z-3' }}"
+                    src={{ asset('images/guitar.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 3 ? 'rotate-0 z-5' : 'rotate-4 z-2' }}"
+                    src={{ asset('images/snowboarding.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 4 ? 'rotate-0 z-5' : 'rotate-4 z-1' }}"
+                    src={{ asset('images/family.webp') }}>
             </div>
         </div>
     </section>

@@ -1,3 +1,3 @@
-<x-layout>
+<div>
     <h1>About</h1>
-</x-layout>
+</div>

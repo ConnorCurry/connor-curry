@@ -1,19 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Home;
+use App\Livewire\About;
+use App\Livewire\Projects;
+use App\Livewire\Blog;
+use App\Livewire\Contact;
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/about', function () {
-    return view('livewire.about');
-});
-Route::get('/projects', function () {
-    return view('livewire.projects');
-});
-Route::get('/blog', function () {
-    return view('livewire.blog');
-});
-Route::get('/contact', function () {
-    return view('livewire.contact');
-});
+Route::get('/', Home::class);
+Route::get('/about', About::class);
+Route::get('/projects', Projects::class);
+Route::get('/blog', Blog::class);
+Route::get('/contact', Contact::class);

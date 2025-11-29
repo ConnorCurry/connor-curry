@@ -24,7 +24,8 @@
     <body>
         <div class="">
             @include('livewire.partials.header')
-            {{ $slot }}
+            <div class="min-h-screen">{{ $slot }}</div>
+            @include('livewire.partials.footer')
         </div>
     </body>
 </html>

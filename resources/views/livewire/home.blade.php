@@ -43,8 +43,11 @@
             </div>
 
             <div class="w-full md:w-1/2 relative aspect-4/3 cursor-pointer" wire:click='shufflePhotos'>
-                <img class="rounded-lg w-full absolute z-5" src={{ asset('images/graduation.webp') }}>
-                <img class="rounded-lg w-full absolute rotate-4 z-4" src={{ asset('images/stewart-pk.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 0 ? "rotate-0 z-5" : "rotate-4 z-0" }}" src={{ asset('images/graduation.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 1 ? "rotate-0 z-5" : "rotate-4 z-4" }}" src={{ asset('images/stewart-pk.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 2 ? "rotate-0 z-5" : "rotate-4 z-3" }}" src={{ asset('images/guitar.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 3 ? "rotate-0 z-5" : "rotate-4 z-2" }}" src={{ asset('images/snowboarding.webp') }}>
+                <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 4 ? "rotate-0 z-5" : "rotate-4 z-1" }}" src={{ asset('images/family.webp') }}>
             </div>
         </div>
     </section>

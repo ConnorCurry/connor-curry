@@ -1,5 +1,5 @@
 <div class="w-full bg-slate-800">
-    <div class="mx-auto max-w-4xl py-12 px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="mx-auto max-w-4xl py-12 px-3 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div class="">
             <h1 class="text-5xl font-bold mb-4">
                 Connor<br>Curry

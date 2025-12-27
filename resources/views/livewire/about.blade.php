@@ -21,7 +21,7 @@
                 <p class="mt-4">I'm currently working at <a target="_blank" href="https://evolutionmarketing.com" class="text-indigo-400 cursor-pointer hover:-translate-y-0.5 hover:text-primary transition inline-block">Evolution Marketing</a> as a Frontend Web Developer, where I manage the development and maintenance of several hundred websites. This space will be more for my personal interests and projects, but feel free to get in touch <a target="_blank" href="https://evolutionmarketing.com/contact" class="text-indigo-400 cursor-pointer hover:-translate-y-0.5 hover:text-primary transition inline-block">here</a> if you're interested in working with Evolution Marketing.
                 </p>
             </div>
-            <div class="w-full md:w-1/2"><img src={{ asset('images/placeholder.svg') }}
+            <div class="w-full md:w-1/2"><img src={{ asset('images/spain.webp') }}
                     class="aspect-square rounded-lg object-cover w-full"></div>
         </div>
     </div>

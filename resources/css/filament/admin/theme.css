@@ -18,4 +18,13 @@
     .fi-topbar-start {
         @apply w-full justify-between mr-4;
     }
+
+    /* Dark Mode */
+
+    .dark {
+        .fi-global-search-field .fi-input, .fi-global-search-field .fi-icon {
+            @apply text-white placeholder:text-neutral-300;
+        }
+    }
+    
 }

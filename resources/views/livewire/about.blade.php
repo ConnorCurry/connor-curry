@@ -15,9 +15,9 @@
         <span class="text-gray-500 px-1">/</span> <a class="text-gray-300">About Me</a>
     </div>
     <div class="max-w-7xl px-3 mx-auto w-full">
-        <div class="flex flex-row flex-wrap md:flex-nowrap gap-6 py-4 md:py-8">
+        <div class="flex flex-row flex-wrap md:flex-nowrap gap-6 py-4 md:py-12">
             <div class="w-full md:w-1/2 flex flex-col justify-center text-lg">
-                <p>I'm a Western New York based web and software developer with a variety of  hobbies, many of which I intend to start documenting here! Outside of coding, I'm a musician, a snowboarder, a runner a gamer and a Buffalo Bills fan since birth.</p>
+                <p>I'm a Western New York based web and software developer with a variety of  hobbies, many of which I intend to start documenting here! Outside of coding, I'm a musician, a snowboarder, a runner, a gamer, a Buffalo Bills fan (since birth), and much more.</p>
                 <p class="mt-4">I'm currently working at <a target="_blank" href="https://evolutionmarketing.com" class="text-indigo-400 cursor-pointer hover:-translate-y-0.5 hover:text-primary transition inline-block">Evolution Marketing</a> as a Frontend Web Developer, where I manage the development and maintenance of several hundred websites. This space will be more for my personal interests and projects, but feel free to get in touch <a target="_blank" href="https://evolutionmarketing.com/contact" class="text-indigo-400 cursor-pointer hover:-translate-y-0.5 hover:text-primary transition inline-block">here</a> if you're interested in working with Evolution Marketing.
                 </p>
             </div>

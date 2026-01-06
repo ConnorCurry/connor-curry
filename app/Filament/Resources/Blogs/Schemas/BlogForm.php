@@ -4,7 +4,8 @@ namespace App\Filament\Resources\Blogs\Schemas;
 
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\CodeEditor;
+use Filament\Forms\Components\CodeEditor\Enums\Language;
 use Filament\Schemas\Schema;
 
 class BlogForm
@@ -21,8 +22,8 @@ class BlogForm
                 TextInput::make('subtitle')
                     ->columnSpanFull()
                     ->required(),
-                Textarea::make('content')
-                    ->required()
+                CodeEditor::make('content')
+                    ->language(Language::Markdown)
                     ->columnSpanFull(),
             ]);
     }

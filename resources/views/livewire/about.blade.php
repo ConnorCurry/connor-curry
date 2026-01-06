@@ -5,7 +5,7 @@
         <img class="w-full object-cover z-1 absolute left-0 -translate-y-1/2 blur"
             src={{ asset('images/stewart-pk.webp') }}>
         <div
-            class="bg-slate-900/50 w-full h-full absolute top-0 left-0 z-4 md:pt-20 pt-5 flex justify-center items-center">
+            class="bg-slate-900/65 w-full h-full absolute top-0 left-0 z-4 md:pt-20 pt-5 flex justify-center items-center">
             <h1 class="text-3xl md:text-5xl font-bold">About Me</h1>
         </div>
     </div>

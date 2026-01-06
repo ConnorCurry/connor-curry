@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Project extends Model
@@ -14,4 +15,9 @@ class Project extends Model
         'subtitle',
         'content'
     ];
+
+    public function blogs(): HasMany
+    {
+        return $this->hasMany(Blog::class);
+    }
 }

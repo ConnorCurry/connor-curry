@@ -9,7 +9,6 @@ use App\Filament\Resources\Blogs\Schemas\BlogForm;
 use App\Filament\Resources\Blogs\Tables\BlogsTable;
 use App\Models\Blog;
 use BackedEnum;
-use Filament\Forms\Components\Select;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,9 +20,11 @@ class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
 
     protected static ?string $recordTitleAttribute = 'Blog';
+    
+    protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema
     {
@@ -38,7 +39,7 @@ class BlogResource extends Resource
     public static function getRelations(): array
     {
         return [
-            
+
         ];
     }
 

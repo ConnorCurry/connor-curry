@@ -19,9 +19,21 @@ class ProjectsTable
         return $table
             ->columns([
                 TextColumn::make('title'),
+                TextColumn::make('created_at')
+                    ->label('Created')
+                    ->formatStateUsing(fn (string $state): string => format_time($state))
+                    ->sortable()
+                    ->toggleable(),
                 TextColumn::make('updated_at')
                     ->label('Updated')
-                    ->sortable(),
+                    ->formatStateUsing(fn (string $state): string => format_time($state))
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('deleted_at')
+                    ->label('Deleted')
+                    ->formatStateUsing(fn (string $state): string => format_time($state))
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 TrashedFilter::make(),

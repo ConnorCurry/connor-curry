@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -7,6 +8,13 @@
     --font-sans: 'Ubuntu', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --color-primary: #715df2;
     --color-secondary: #0046FF;
+}
+
+@layer utilities {
+    .prose {
+        --tw-prose-headings: #FFF;
+        --tw-prose-body: #FFF;
+    }
 }
 
 @layer base {

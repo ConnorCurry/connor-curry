@@ -29,7 +29,7 @@
                             </span>
                             <p class="my-2">{{ $blog->subtitle }}</p>
                         </div>
-                        <a href="/projects/{{ $blog->project->id }}" class="text-indigo-400 hover:translate-x-1 hover:text-primary transition inline-block w-fit">Read More &#8594</a>
+                        <a href="/blog/{{ $blog->id }}" class="text-indigo-400 hover:translate-x-1 hover:text-primary transition inline-block w-fit">Read More &#8594</a>
                     </div>
                 </div>
             @endforeach

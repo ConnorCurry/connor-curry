@@ -14,7 +14,8 @@ class View extends Component
     public $content = '';
     public $blogs;
 
-    public function mount ($projectId) {
+    public function mount ($projectId) 
+    {
         if (!$projectId) {
             return;
         }

@@ -5,7 +5,7 @@
         <span class="text-gray-500 px-1">/</span>
         <a href="/projects"
             class="text-indigo-400 cursor-pointer hover:-translate-y-0.5 inline-block hover:text-primary transition">Projects</a>
-        <span class="text-gray-500 px-1">/</span> <a class="text-gray-300"">{{ $project->title }}</a>
+        <span class="text-gray-500 px-1">/</span> <a class="text-gray-300">{{ $project->title }}</a>
     </div>
     <div class="flex flex-row flex-wrap md:flex-nowrap justify-between w-full pt-4 gap-6">
         <div class="w-full md:max-w-120 md:w-1/3 md:order-1">

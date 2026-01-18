@@ -22,8 +22,8 @@ class BlogResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
 
-    protected static ?string $recordTitleAttribute = 'Blog';
-    
+    protected static ?string $recordTitleAttribute = 'title';
+
     protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema

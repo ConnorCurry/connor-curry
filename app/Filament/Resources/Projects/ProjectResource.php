@@ -22,7 +22,7 @@ class ProjectResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPencilSquare;
 
-    protected static ?string $recordTitleAttribute = 'Project';
+    protected static ?string $recordTitleAttribute = 'title';
 
     protected static ?int $navigationSort = 1;
 

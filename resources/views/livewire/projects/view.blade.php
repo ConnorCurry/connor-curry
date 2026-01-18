@@ -9,7 +9,7 @@
     </div>
     <div class="flex flex-row flex-wrap md:flex-nowrap justify-between w-full pt-4 gap-6">
         <div class="w-full md:max-w-120 md:w-1/3 md:order-1">
-            <img class="w-full h-auto object-cover rounded-lg" src={{ asset('images/placeholder.svg') }}>
+            <img class="w-full h-auto object-cover rounded-lg" src={{ $thumbnail }}>
         </div>
         <div class="w-full md:w-auto">
             <h1 class="font-bold text-3xl">{{ $project->title }}</h1>

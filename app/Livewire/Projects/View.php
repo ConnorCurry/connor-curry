@@ -13,8 +13,9 @@ class View extends Component
     public $project;
     public $content = '';
     public $blogs;
+    public $thumbnail;
 
-    public function mount ($projectId) 
+    public function mount ($projectId)
     {
         if (!$projectId) {
             return;
@@ -26,6 +27,11 @@ class View extends Component
             $md->setContent($this->project->content);
             $this->content = $md->getHtml();
             $this->blogs = Blog::where('project_id', $projectId)->orderByDesc('created_at')->limit(5)->get();
+            if ($this->project->thumbnail) {
+                $this->thumbnail = Asset('storage/' . $this->project->thumbnail);
+            } else {
+                $this->thumbnail = Asset('images/placeholder.svg');
+            }
         }
     }
 

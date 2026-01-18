@@ -1,7 +1,7 @@
 <div class="rounded-lg bg-slate-800 hover:bg-slate-700/65 transition overflow-hidden flex flex-wrap md:flex-nowrap flex-row">
     <div>
         <img class="w-full md:w-auto md:max-w-80 aspect-video h-full object-cover"
-            src={{ asset('images/placeholder.svg') }}>
+            src={{ $thumbnail }}>
     </div>
     <div class="p-4 w-full flex flex-col justify-between">
         <div>

@@ -11,6 +11,7 @@ class View extends Component
     public $blogId = 0;
     public $blog;
     public $content;
+    public $thumbnail;
 
     public function mount ($blogId)
     {
@@ -23,6 +24,11 @@ class View extends Component
             $md = Markdown::new();
             $md->setContent($this->blog->content);
             $this->content = $md->getHtml();
+        }
+        if ($this->blog->thumbnail) {
+            $this->thumbnail = Asset('storage/' . $this->blog->thumbnail);
+        } else {
+            $this->thumbnail = Asset('images/placeholder.svg');
         }
     }
 

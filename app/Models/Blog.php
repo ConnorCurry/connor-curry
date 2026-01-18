@@ -16,6 +16,7 @@ class Blog extends Model
         'subtitle',
         'content',
         'project_id',
+        'thumbnail',
     ];
 
     public function project(): BelongsTo

@@ -6,6 +6,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\CodeEditor;
 use Filament\Forms\Components\CodeEditor\Enums\Language;
+use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Schema;
 
 class BlogForm
@@ -25,6 +26,9 @@ class BlogForm
                 CodeEditor::make('content')
                     ->language(Language::Markdown)
                     ->columnSpanFull(),
+                FileUpload::make('thumbnail')
+                    ->disk('public')
+                    ->image(),
             ]);
     }
 }

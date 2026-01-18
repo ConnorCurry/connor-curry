@@ -13,7 +13,8 @@ class Project extends Model
     protected $fillable = [
         'title',
         'subtitle',
-        'content'
+        'content',
+        'thumbnail'
     ];
 
     public function blogs(): HasMany

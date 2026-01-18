@@ -17,15 +17,7 @@
     <div class="max-w-7xl px-3 mx-auto w-full">
         <div class="flex flex-col gap-6 py-4 md:py-12">
             @foreach ($projects as $project)
-                <a href="/projects/{{ $project->id }}" wire:key="{{ $project->id }}" class="rounded-lg bg-slate-800 hover:bg-slate-700 transition overflow-hidden flex md:flex-nowrap flex-row hover:-translate-y-1">
-                    <div class="">
-                        <img class="max-w-80 aspect-video h-auto object-cover" src={{ asset('images/placeholder.svg') }}>
-                    </div>
-                    <div class="p-4">
-                        <h2 class="font-bold text-xl">{{ $project->title }}</h2>
-                        <p>{{ $project->subtitle }}</p>
-                    </div>
-                </a>
+               <livewire:partials.project-list-item :$project :key="$project->id">
             @endforeach
         </div>
     </div>

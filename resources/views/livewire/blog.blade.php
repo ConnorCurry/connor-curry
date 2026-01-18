@@ -15,7 +15,19 @@
         <span class="text-gray-500 px-1">/</span> <a class="text-gray-300">Blog</a>
     </div>
     <div class="max-w-7xl px-3 mx-auto w-full">
-        <div class="flex flex-col gap-6 py-4 md:py-12">
+        <div class="flex flex-row flex-wrap gap-3 pt-4 md:pt-6">
+            @foreach ($projects as $project)
+                <button wire:key="$project->id" wire:click="filterProject({{ $project->id }})"
+                    @class([
+                        'p-1 px-2 hover:bg-primary border-primary hover:border-indigo-400  hover:text-white text-sm border rounded inline-block transition cursor-pointer',
+                        'bg-primary/50 text-indigo-200' => $projectFilter !== $project->id,
+                        'bg-primary text-white' => ($projectFilter === $project->id)
+                        ])>
+                    {{ $project->title }}
+                </button>
+            @endforeach
+        </div>
+        <div class="flex flex-col gap-6 py-4 md:pb-12 md:pt-6">
             @foreach ($blogs as $blog)
                 <livewire:partials.blog-list-item :$blog :key="$blog->id">
             @endforeach

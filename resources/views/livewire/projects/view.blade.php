@@ -18,7 +18,10 @@
         </div>
     </div>
     <div class="pt-12">
-        <h3 class="text-2xl font-bold mb-6">Latest Blogs</h3>
+        <h3 class="text-2xl font-bold mb-6 inline-block">Latest Blogs</h3>
+        <a href="{{ '/blog?proj=' . $project->id }}" class="text-indigo-400 hover:translate-x-1 hover:text-primary transition inline-block w-fit ml-3">
+            View All Blogs &#8594
+        </a>
         <div class="flex flex-col gap-6">
             @foreach ($blogs as $blog)
                 <livewire:partials.blog-list-item :$blog :key="$blog->id">

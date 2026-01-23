@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ContactSubmissionController;
 use App\Livewire\Home;
 use App\Livewire\About;
 use App\Livewire\Projects;
@@ -17,6 +18,8 @@ Route::get('/blog', Blog::class);
 Route::get('/contact', Contact::class);
 Route::get('/projects/{projectId}', ProjectsView::class);
 Route::get('/blog/{blogId}', BlogView::class);
+
+Route::post('/contact-submission', [ContactSubmissionController::class, 'submission']);
 
 Route::post('/set-timezone', function (Request $request) {
     $tz = $request->input('timezone');

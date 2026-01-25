@@ -10,12 +10,14 @@ use App\Livewire\Blog;
 use App\Livewire\Contact;
 use App\Livewire\Projects\View as ProjectsView;
 use App\Livewire\Blog\View as BlogView;
+use App\Livewire\SubmissionReceived;
 
 Route::get('/', Home::class);
 Route::get('/about', About::class);
 Route::get('/projects', Projects::class);
 Route::get('/blog', Blog::class);
 Route::get('/contact', Contact::class);
+Route::get('/submission-received', SubmissionReceived::class);
 Route::get('/projects/{projectId}', ProjectsView::class);
 Route::get('/blog/{blogId}', BlogView::class);
 

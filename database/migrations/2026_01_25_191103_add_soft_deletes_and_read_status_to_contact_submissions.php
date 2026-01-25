@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('contact_submissions', function (Blueprint $table) {
             $table->softDeletes();
-            $table->enum('read_status', ['read', 'unread'])->nullable()->after('message');
+            $table->enum('read_status', ['read', 'unread'])->default('unread')->after('message');
         });
     }
 

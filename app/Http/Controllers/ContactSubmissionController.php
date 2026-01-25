@@ -11,7 +11,6 @@ class ContactSubmissionController extends Controller
 {
     public function submission (Request $request): RedirectResponse
     {
-        Log::info($request);
         $submission = new ContactSubmission;
         $submission->name = $request->name;
         $submission->email = $request->email;

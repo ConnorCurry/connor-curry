@@ -44,7 +44,6 @@ class ContactSubmissionResource extends Resource
     {
         return [
             'index' => ListContactSubmissions::route('/'),
-            'view' => ViewContactSubmission::route('/{record}'),
         ];
     }
 

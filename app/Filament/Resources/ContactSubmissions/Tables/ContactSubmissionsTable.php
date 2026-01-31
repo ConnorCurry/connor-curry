@@ -15,6 +15,7 @@ use Filament\Actions\BulkAction;
 use Filament\Support\Icons\Heroicon;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Collection;
+use Livewire\Component;
 
 class ContactSubmissionsTable
 {
@@ -82,7 +83,29 @@ class ContactSubmissionsTable
                             ->send();
                     })
                     ->visible(fn (ContactSubmission $record) => $record->read_status === 'read'),
-                ViewAction::make(),
+                ViewAction::make('view-contact-submission')
+                    ->mountUsing(function (ContactSubmission $record) {
+                        if ($record->read_status === 'unread') {
+                            $record->read_status = 'read';
+                            $record->save();
+                        }
+                    })
+                    ->extraModalFooterActions([
+                        Action::make('mark_unread')
+                            ->label('Mark as Unread')
+                            ->color('info')
+                            ->icon(Heroicon::Envelope)
+                            ->action(function (ContactSubmission $record, Component $livewire) {
+                                $record->read_status = 'unread';
+                                $record->save();
+                                Notification::make()
+                                    ->title('Marked as unread')
+                                    ->success()
+                                    ->send();
+                                // TODO: this feels like a hack...
+                                $livewire->dispatch('close-modal', id: "fi-{$livewire->getId()}-action-0");
+                            }),
+                    ]),
                 DeleteAction::make(),
             ])
             ->toolbarActions([

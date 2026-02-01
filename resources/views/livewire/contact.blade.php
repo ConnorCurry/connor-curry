@@ -18,6 +18,7 @@
         <p class="mb-4 text-center text-lg">If you're looking to get in touch with me directly you can fill out the form below!</p>
         <form class="flex flex-col" method="POST" action="/contact-submission">
             @csrf
+            <input type="hidden" id="rtficoa" name="rtficoa" value="uheox12" >
             <label class="block mb-2 text-lg" for="name"><strong>Name<span class="text-red-500">&nbsp;*</span></strong></label>
             <input class="mb-4 bg-white focus:inset-shadow-sm focus:inset-shadow-primary focus-visible:outline-primary rounded-lg px-2 py-1 text-black" required name="name" id="name" autocomplete="name" type="text"/>
             <label class="block mb-2 text-lg" for="email"><strong>Email<span class="text-red-500">&nbsp;*</span></strong></label>
@@ -30,3 +31,6 @@
         </form>
     </section>
 </div>
+
+<script>document.getElementById("rtficoa").value = "1dvuwoen3";</script>
+

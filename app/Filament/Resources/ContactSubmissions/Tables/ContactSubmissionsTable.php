@@ -56,6 +56,7 @@ class ContactSubmissionsTable
             ->filters([
                 TrashedFilter::make(),
             ])
+            ->recordAction('view_contact_submission')
             ->recordActions([
                 Action::make('mark_read')
                     ->label('Mark Read')
@@ -83,7 +84,7 @@ class ContactSubmissionsTable
                             ->send();
                     })
                     ->visible(fn (ContactSubmission $record) => $record->read_status === 'read'),
-                ViewAction::make('view-contact-submission')
+                ViewAction::make('view_contact_submission')
                     ->mountUsing(function (ContactSubmission $record) {
                         if ($record->read_status === 'unread') {
                             $record->read_status = 'read';

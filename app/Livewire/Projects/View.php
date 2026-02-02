@@ -26,7 +26,7 @@ class View extends Component
             $md = Markdown::new();
             $md->setContent($this->project->content);
             $this->content = $md->getHtml();
-            $this->blogs = Blog::where('project_id', $projectId)->orderByDesc('created_at')->limit(5)->get();
+            $this->blogs = Blog::whereRelation('projects', 'projects.id', '=', $projectId)->orderByDesc('created_at')->limit(5)->get();
             if ($this->project->thumbnail) {
                 $this->thumbnail = Asset('storage/' . $this->project->thumbnail);
             } else {

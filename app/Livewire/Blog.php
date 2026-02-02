@@ -29,7 +29,7 @@ class Blog extends Component
         if ($this->projectFilter === 0) {
             $this->blogs = ModelsBlog::all();
         } else {
-            $this->blogs = ModelsBlog::whereBelongsTo(Project::find($this->projectFilter))->get();
+            $this->blogs = ModelsBlog::whereRelation('projects', 'projects.id', '=', $this->projectFilter)->get();
         }
     }
 

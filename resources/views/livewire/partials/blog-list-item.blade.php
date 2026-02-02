@@ -7,11 +7,13 @@
         <div>
             <span>
                 <h2 class="font-bold text-xl inline-block mr-2 mb-2 md:mb-0">{{ $blog->title }}</h2>
-                @if ($currentRoute === '/projects/' . $blog->project->id)
-                    <a class="p-1 px-2 bg-primary/50 hover:bg-primary border-primary hover:border-indigo-400 text-indigo-200 hover:text-white text-sm border rounded inline-block transition">{{ $blog->project->title }}</a>
-                @else
-                    <a href="/projects/{{ $blog->project->id }}" class="p-1 px-2 bg-primary/50 hover:bg-primary border-primary hover:border-indigo-400 text-indigo-200 hover:text-white text-sm border rounded inline-block transition">{{ $blog->project->title }}</a>
-                @endif
+                @foreach($blog->projects as $project)
+                    @if ($currentRoute === '/projects/' . $project->id)
+                        <a class="p-1 px-2 bg-primary/50 hover:bg-primary border-primary hover:border-indigo-400 text-indigo-200 hover:text-white text-sm border rounded inline-block transition">{{ $project->title }}</a>
+                    @else
+                        <a href="/projects/{{ $project->id }}" class="p-1 px-2 bg-primary/50 hover:bg-primary border-primary hover:border-indigo-400 text-indigo-200 hover:text-white text-sm border rounded inline-block transition">{{ $project->title }}</a>
+                    @endif
+                @endforeach
             </span>
             <p class="my-2">{{ $blog->subtitle }}</p>
         </div>

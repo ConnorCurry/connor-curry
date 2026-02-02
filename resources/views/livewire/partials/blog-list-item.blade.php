@@ -18,7 +18,7 @@
             <p class="my-2">{{ $blog->subtitle }}</p>
         </div>
         <span class="text-gray-400 flex justify-between">
-            {{ format_time($blog->created_at) }}&nbsp;
+            {{ format_time($blog->created_at, 'word') }}&nbsp;
             <a href="/blog/{{ $blog->id }}"
                 class="text-indigo-400 hover:translate-x-1 hover:text-primary transition inline-block w-fit">Read
                 More &#8594</a>

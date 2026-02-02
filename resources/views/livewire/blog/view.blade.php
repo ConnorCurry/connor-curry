@@ -16,6 +16,9 @@
             @foreach($blog->projects as $project)
                 <a href="/projects/{{ $project->id }}" class="p-1 px-2 mt-2 bg-primary/50 hover:bg-primary border-primary hover:border-indigo-400 text-indigo-200 hover:text-white text-sm border rounded inline-block transition">{{ $project->title }}</a>
             @endforeach
+            <span class="text-gray-400 flex justify-between mt-3">
+                {{ format_time($blog->created_at, 'word') }}&nbsp;
+            </span>
             <p class="text-lg mt-2 mb-6">{{ $blog->subtitle }}</p>
             <div class="prose">{!! $content !!}</div>
         </div>

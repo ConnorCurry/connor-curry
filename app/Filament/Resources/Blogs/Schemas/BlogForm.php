@@ -18,7 +18,8 @@ class BlogForm
                 TextInput::make('title')
                     ->required(),
                 Select::make('project_id')
-                    ->relationship(name: 'project', titleAttribute: 'title')
+                    ->multiple()
+                    ->relationship(name: 'projects', titleAttribute: 'title')
                     ->required(),
                 TextInput::make('subtitle')
                     ->columnSpanFull()

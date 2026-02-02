@@ -21,7 +21,7 @@ class BlogsTable
                 TextColumn::make('title')
                     ->sortable()
                     ->searchable(),
-                TextColumn::make('project.title')
+                TextColumn::make('projects.title')
                     ->sortable()
                     ->toggleable(),
                 TextColumn::make('subtitle')

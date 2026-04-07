@@ -33,9 +33,14 @@ RUN sed 's_@php artisan package:discover_/bin/true_;' -i composer.json \
     && chown -R :www-data . \
     && chmod -R 775 .
 
+RUN chown -R www-data:www-data /usr/share/nginx/html/database \
+    && chmod -R 775 /usr/share/nginx/html/database
+
 RUN sed -i 's/listen = 127.0.0.1:9000/listen = 9000/' /usr/local/etc/php-fpm.d/www.conf
 
-RUN php artisan migrate
+RUN php artisan down \
+	&& php artisan migrate --force \
+	&& php artisan up
 
 # Install Node.js and npm
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \

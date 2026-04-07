@@ -1,0 +1,38 @@
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - storage:/usr/share/nginx/html/storage:rw
+      - public:/usr/share/nginx/html/public:rw
+      - db-data:/usr/share/nginx/html/database:rw
+    networks:
+      - internal
+
+  nginx:
+    image: nginx:1-alpine
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "8001:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/templates/default.conf.template
+      - storage:/usr/share/nginx/html/storage:ro
+      - public:/usr/share/nginx/html/public:ro
+    networks:
+      - internal
+
+volumes:
+  storage:
+  public:
+  db-data:
+
+networks:
+  internal:
+    driver: bridge

@@ -24,7 +24,7 @@
         </a>
         <div class="flex flex-col gap-6">
             @foreach ($blogs as $blog)
-                <livewire:partials.blog-list-item :$blog :key="$blog->id">
+                <livewire:partials.blog-list-item :$blog :key="$blog->id"/>
             @endforeach
         </div>
     </div>

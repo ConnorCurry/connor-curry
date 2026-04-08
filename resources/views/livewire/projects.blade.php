@@ -17,7 +17,7 @@
     <div class="max-w-7xl px-3 mx-auto w-full">
         <div class="flex flex-col gap-6 py-4 md:py-12">
             @foreach ($projects as $project)
-               <livewire:partials.project-list-item :$project :key="$project->id">
+               <livewire:partials.project-list-item :$project :key="$project->id"/>
             @endforeach
         </div>
     </div>

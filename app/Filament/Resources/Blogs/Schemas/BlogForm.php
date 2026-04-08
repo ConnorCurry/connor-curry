@@ -26,7 +26,8 @@ class BlogForm
                     ->required(),
                 CodeEditor::make('content')
                     ->language(Language::Markdown)
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->wrap(),
                 FileUpload::make('thumbnail')
                     ->disk('public')
                     ->image(),

@@ -21,7 +21,9 @@ class ProjectForm
                     ->columnSpanFull()
                     ->required(),
                 CodeEditor::make('content')
-                    ->language(Language::Markdown),
+                    ->language(Language::Markdown)
+                    ->columnSpanFull()
+                    ->wrap(),
                 FileUpload::make('thumbnail')
                     ->disk('public')
                     ->image(),

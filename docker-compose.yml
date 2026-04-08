@@ -36,6 +36,8 @@ services:
       - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
     depends_on:
       - nginx
+    networks:
+      - internal
 
 volumes:
   storage:

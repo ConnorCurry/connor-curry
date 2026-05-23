@@ -20,7 +20,7 @@
         </div>
     </div>
     <section>
-        <div class="max-w-7xl mx-auto px-3 py-12 flex flex-wrap gap-8 lg:flex-nowrap">
+        <div class="max-w-7xl mx-auto px-3 py-12 flex flex-wrap gap-8 lg:flex-nowrap overflow-hidden">
             <div class="w-full lg:w-1/2 flex flex-col justify-center">
                 <h1 class="text-3xl mb-4">About Me</h1>
                 <p class="mb-4">An Ithaca College graduate, programmer, web developer/designer, musician, snowboarder and more.
@@ -47,7 +47,7 @@
                     href="/about">Learn More About Me &#8594</a>
             </div>
 
-            <div class="w-full md:w-1/2 relative aspect-4/3 cursor-pointer" wire:click='shufflePhotos'>
+            <div class="w-full lg:w-1/2 relative aspect-4/3 cursor-pointer" wire:click='shufflePhotos'>
                 <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 0 ? 'rotate-0 z-5' : 'rotate-4 z-0' }}"
                     src={{ asset('images/graduation.webp') }}>
                 <img class="rounded-lg w-full absolute transition-transform duration-400 {{ $photoIndex === 1 ? 'rotate-0 z-5' : 'rotate-4 z-4' }}"

@@ -7,7 +7,7 @@
             <a class="hover:text-white/80 hover:-translate-y-1 transition-all" href="/blog">Blog</a>
             <a class="hover:text-white/80 hover:-translate-y-1 transition-all" href="/contact">Get in Touch</a>
         </nav>
-        <div class="md:hidden pr-2 pt-2">
+        <div class="md:hidden px-3 pt-2">
             <button x-on:click="dropdownOpen = !dropdownOpen" class="w-6 h-9 rounded-lg cursor-pointer lg:hidden relative" aria-label="Menu dropdown toggle">
                 <div class="h-[2px] w-6 bg-white rounded absolute left-1/2 -translate-x-1/2 transition-all duration-300"
                 :class="dropdownOpen ? 'top-1/2 -translate-y-1/2 opacity-0' : 'top-1/4 translate-y-0'" ></div>

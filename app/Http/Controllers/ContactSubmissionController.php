@@ -11,7 +11,7 @@ class ContactSubmissionController extends Controller
 {
     public function submission (Request $request): RedirectResponse
     {
-        if ($request->rtficoa === '1dvuwoen3') {
+        if ($request->rtficoa === '1dvuwoen3' && $request->name !== 'Russellbet') {
             Log::info('ip: ' . $request->ip());
             $submission = new ContactSubmission;
             $submission->name = $request->name;

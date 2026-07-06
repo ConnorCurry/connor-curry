@@ -9,11 +9,11 @@
         </nav>
         <div class="md:hidden px-3 pt-2">
             <button x-on:click="dropdownOpen = !dropdownOpen" class="w-6 h-9 rounded-lg cursor-pointer lg:hidden relative" aria-label="Menu dropdown toggle">
-                <div class="h-[2px] w-6 bg-white rounded absolute left-1/2 -translate-x-1/2 transition-all duration-300"
+                <div class="h-[2px] w-6 bg-white rounded absolute left-1/2 -translate-x-1/2 transition-all duration-200"
                 :class="dropdownOpen ? 'top-1/2 -translate-y-1/2 opacity-0' : 'top-1/4 translate-y-0'" ></div>
-                <div class="h-[2px] w-6 bg-white rounded absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition duration-300" :class="dropdownOpen ? 'rotate-45' : '' "></div>
-                <div class="h-[2px] w-6 bg-white rounded absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition duration-300" :class="dropdownOpen ? '-rotate-45' : '' "></div>
-                <div class="h-[2px] w-6 bg-white rounded absolute bottom-1/4 left-1/2 -translate-x-1/2 transition duration-300" :class="dropdownOpen ? 'top-1/2 -translate-y-1/2 opacity-0' : 'bottom-1/4 translate-y-0'"></div>
+                <div class="h-[2px] w-6 bg-white rounded absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition duration-200" :class="dropdownOpen ? 'rotate-45' : '' "></div>
+                <div class="h-[2px] w-6 bg-white rounded absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition duration-200" :class="dropdownOpen ? '-rotate-45' : '' "></div>
+                <div class="h-[2px] w-6 bg-white rounded absolute bottom-1/4 left-1/2 -translate-x-1/2 transition duration-200" :class="dropdownOpen ? 'top-1/2 -translate-y-1/2 opacity-0' : 'bottom-1/4 translate-y-0'"></div>
             </button>
         </div>
 
@@ -21,10 +21,10 @@
 
     <img class="w-full max-h-16 object-fill object-top" src={{ asset('images/layered-waves-haikei.webp') }}>
     <nav x-show="dropdownOpen" class="bg-primary flex flex-col gap-3 p-4 -z-1 w-full absolute"
-        x-transition:enter="transition ease-out duration-800"
+        x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="translate-y-[-150%]"
         x-transition:enter-end="translate-none"
-        x-transition:leave="transition ease-out duration-800"
+        x-transition:leave="transition ease-out duration-300"
         x-transition:leave-start="translate-none"
         x-transition:leave-end="translate-y-[-150%]">
         <div class="bg-primary absolute bottom-full left-0 w-full h-10"></div>
